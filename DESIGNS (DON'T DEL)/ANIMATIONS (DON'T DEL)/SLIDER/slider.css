@@ -1,0 +1,168 @@
+* {margin: 0; padding: 0;} html {height: 200%;} body {background: rgb(189, 117, 117);}
+/*SLIDER*/
+#container {
+    width: 400px; /*vh,% makes responsive*/
+    height: 240px; /*vh,% makes responsive*/
+    overflow: hidden; /*determined by two lines above*/
+}#slider {
+    display: inline-flex;
+    color: white;
+}#contents { /*think: writing space*/
+    width: 400px; /*vh,% makes responsive*/
+    height: 240px; /*vh,% makes responsive*/
+}
+/*CONTROLLER*/
+#controller {
+    width: 2px;
+    height: 320px; /*multiple of count(boxes and handle)*/
+    display: block;
+    background: white;
+    position: absolute;
+    right: 100px;
+}#box1, #box2, #box3, #box4 {
+    width: 8px;
+    height: 80px;
+    cursor: pointer;
+}#handle {
+    width: 16px;
+    height: 80px;
+    border-radius: 10px;
+    background: greenyellow;
+    position: absolute;
+    top: 0; /*starts top of controller*/
+    transform: translateX(-40%); /*handle positioning*/
+    transition: 1.5s; /*keep for now*/
+}
+/*BUTTONS*/
+#slider_buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px; /**/
+}#buttonLeft,
+#button1,
+#button2,
+#button3,
+#button4,
+#buttonRight,
+#resume {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background: transparent;
+    margin: 1%;
+    color: white;
+    font-size: 50%;
+    cursor: pointer;
+}#button1 { /*SETUP*/
+    background: white;
+    color: black;
+}#buttonLeft {
+    margin-right: 10%;
+}#buttonRight {
+    margin-left: 10%;
+}
+/*SLIDER2*/
+#container2 {
+    width: 400px; /*vh,% makes responsive*/
+    height: 240px; /*vh,% makes responsive*/
+    overflow: hidden; /*determined by two lines above*/
+}#slider2 {
+    display: inline-flex;
+    color: white;
+}#contents2 { /*think: writing space*/
+    width: 400px; /*vh,% makes responsive*/
+    height: 240px; /*vh,% makes responsive*/
+}
+/*SLIDER3*/
+#container3 {
+    width: 60vw; /*vw makes responsive*/
+    height: 50vh; /*vh,% makes responsive*/
+    overflow: hidden; /*determined by two lines above*/
+}#slider3 {
+    display: inline-flex;
+    color: white;
+}#text {
+    width: 40vw; /*vw makes responsive*/
+    height: 50vh; /*vh,% makes responsive*/
+}#graphic {
+    width: 20vw; /*vw makes responsive*/
+    height: 50vh; /*vh,% makes responsive*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}#resume {
+    width: 8vw;
+    height: 12vh;
+    border-radius: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardContainer1 {
+    height: 20vh;
+    width: 15vw;
+    position: relative;
+    background: transparent;
+    border: 1px solid greenyellow;
+    cursor: pointer;
+}.cardContainer1:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .1), transparent);
+    transition: .4s ease-out;
+}.cardContainer1:hover:after {
+    left: 65%;
+}.cardContainer1 span {
+    position: absolute;
+    transition: .3s ease-out;
+}.cardContainer1 span:nth-child(1) {
+    top: 0;
+    left: 15%;
+    width: 5%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 1), transparent);
+}.cardContainer1:hover span:nth-child(1) {
+    width: 15%;
+    right: 0;
+    transform: translateX(460%);
+}.cardContainer1 span:nth-child(2) {
+    bottom: 0;
+    right: 0;
+    width: 2px;
+    height: 0;
+    background: linear-gradient(0deg, transparent, rgba(255, 255, 255, .75), transparent);
+}.cardContainer1:hover span:nth-child(2) {
+    height: 10%;
+    transform: translateY(-900%);
+}.cardContainer1 span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: .5px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 1), transparent);
+}.cardContainer1:hover span:nth-child(3) {
+    width: 20%;
+    transform: translateX(-400%);
+}.cardContainer1 span:nth-child(4) {
+    top: 10;
+    width: 1px;
+    height: 0;
+    background: linear-gradient(0deg, transparent, rgba(255, 255, 255, .75), transparent);
+}.cardContainer1:hover span:nth-child(4) {
+    height: 20%;
+    transform: translateY(320%);
+}.cardVideo1 {
+    padding: 0px;
+    height: 200px;
+    border: 2px solid black;
+    box-shadow: -8px 8px 20px 0px rgba(0,0,0,.9);
+}
+

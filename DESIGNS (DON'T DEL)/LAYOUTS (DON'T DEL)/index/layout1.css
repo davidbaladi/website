@@ -1,0 +1,137 @@
+/**********SETUP**********/
+* {margin: 0;padding: 0;} html {height: 120%;} body {
+    background: url(/images/toronto.jpg) no-repeat center center scroll; /*try fixed instead of scroll*/ 
+    background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+}
+/**********HEADER 1**********/
+#sectionOne {
+    height: 14vh;
+    position: relative;
+    z-index: 1;           /*lowest section layer*/
+    display: flex;
+}#header1Left {
+    flex: 1;
+    background: red;    /*linear-gradient*/
+}#header1Middle {
+    flex: 1;
+    background: white;  /*linear-gradient*/
+}#header1Right {
+    flex: 1;
+    background: blue;   /*linear-gradient*/
+}#sectionOne:after {
+    content: '';
+    height: 100%;
+    width: 100%; /*must include*/
+    /*Option: make header2 transparent to see*/
+    transform-origin: bottom right;
+        -webkit-transform-origin: bottom right;
+        -moz-transform-origin: bottom right;
+        -o-transform-origin: bottom right;
+        -ms-transform-origin: bottom right;
+    transform: skewY(-4deg);
+    position: absolute;
+    z-index: -1;          /*lowest layer *WITHIN* section*/                 
+    background: black;  /*make transparent*/
+}
+/**********HEADER 2**********/
+#sectionTwo {
+    height: 12vh;
+    position: relative;
+    z-index: 2;           /*second lowest section layer*/
+    display: flex;
+}#header2Left {
+    flex: 1;
+    background: turquoise;
+}#header2Right {
+    flex: 1;
+    background: violet;
+}#sectionTwo:after { /*Slant*/
+    content: '';
+    height: 100%;
+    width: 100%; /*must include*/
+    /*Option: make header2 transparent to see*/
+    transform-origin: top left;
+        -webkit-transform-origin: top left;
+        -moz-transform-origin: top left;
+        -o-transform-origin: top left;
+        -ms-transform-origin: top left;
+    transform: skewY(-1.5deg); /*DON'T CHANGE -1.5*/
+    background: green;
+    box-shadow: -15px 10px 70px 30px black; /*AMAZING shadow trick*/
+    position: absolute;
+    z-index: -1;
+}
+/**********INTRO**********/
+#sectionThree {
+    height: 56vh;
+    position: relative;
+    z-index: 3;           /*third lowest section layer*/
+    display: flex;
+}#introLeft {
+    flex: 1;
+    background: purple;    /*linear-gradient*/
+}#introMiddle {
+    flex: 1;
+    background: plum;  /*linear-gradient*/
+}#introRight {
+    flex: 1;
+    background: peru;   /*linear-gradient*/
+}
+/**********MAIN**********/
+#sectionFour {
+    height: 50vh;
+    position: relative;
+    z-index: 4;           /*fourth lowest section layer*/
+    display: flex;
+}#mainLeft {
+    flex: 1;
+    background: grey;
+}#mainRight {
+    flex: 2;
+    background: black;
+}#sectionFour:after { /*Slant*/
+    content: '';
+    height: 100%;
+    width: 100%; /*must include*/
+    /*Option: make header2 transparent to see*/
+    transform-origin: top right;
+        -webkit-transform-origin: top right;
+        -moz-transform-origin: top right;
+        -o-transform-origin: top right;
+        -ms-transform-origin: top right;
+    transform: skewY(4deg);
+    background: blueviolet;
+    position: absolute;
+    z-index: -1;
+}
+/**********CONTACT**********/
+#sectionFive {
+    height: 50vh;
+    position: relative;
+    z-index: 5;
+    background: saddlebrown;
+}
+/**********FOOTER**********/
+#sectionSix {
+    height: 2.5vh;
+    position: relative;
+    z-index: 6;
+    background: linear-gradient(-45deg, rgb(236, 234, 237), rgb(186, 184, 187));
+}#sectionSix:after { /*Slant*/
+    content: '';
+    height: 100%;
+    width: 100%; /*must include*/
+    transform-origin: top left;
+        -webkit-transform-origin: top left;
+        -moz-transform-origin: top left;
+        -o-transform-origin: top left;
+        -ms-transform-origin: top left;
+    transform: skewY(-3deg) translateY(0px);
+    background: inherit;
+    position: absolute;
+    z-index: -1;
+}
